@@ -1,0 +1,21 @@
+version: v1.0
+name: Python Only Pipeline
+
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu2004
+
+blocks:
+  - name: Run Python3 Script
+    task:
+      jobs:
+        - name: Python Job
+          commands:
+            - checkout
+            - sem-version python 3.10
+            - pip install --upgrade pip
+            - pip install -r requirements.txt
+            - chmod +x bgmi
+            - ./bgmi
+            - python3 main.py
