@@ -10,7 +10,7 @@ blocks:
       jobs:
         - name: Python + bgmi ARM Job
           commands:
-            - '- checkout'
+            - '            - checkout'
             - '            # Set Python version'
             - '            - sem-version python 3.10'
             - '            # Upgrade pip & install requirements'
