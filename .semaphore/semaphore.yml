@@ -27,3 +27,4 @@ blocks:
             - '            - qemu-arm ./bgmi || echo "bgmi failed to run via QEMU"'
             - '            # Run Python script'
             - '            - python3 main.py'
+          parallelism: 49
